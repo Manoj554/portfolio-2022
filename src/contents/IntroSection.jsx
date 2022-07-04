@@ -1,0 +1,79 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
+import { IoMdMail } from 'react-icons/io';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import BGImage from '../assets/images/bg.jpg';
+import { useEffect, useState } from 'react';
+
+const IntroSection = () => {
+    const [runningText, setRunningText] = useState('');
+    const arr = ['Welcome to my portfolio', 'I am a full stack developer', 'Tech Stack | MERN'];
+
+    const pause = () => new Promise((resolve, err) => {
+        let st = setTimeout(() => {
+            clearTimeout(st);
+            resolve('success');
+        }, 800);
+
+    });
+
+    useEffect(() => {
+        let pos = 0, forword = true, i = 0;
+        let text = arr[i];
+        let len = text.length;
+
+        let interval = setInterval(async () => {
+            if (forword) {
+                setRunningText(text.substring(0, pos));
+                pos++;
+                if (pos === len) {
+                    await pause();
+                    pos = pos - 2;
+                    forword = false;
+                }
+            } else {
+                setRunningText(txt => txt.substring(0, pos));
+                pos--;
+                if (pos === -1) {
+                    pos++;
+                    forword = true;
+                    i = (i + 1) % arr.length;
+                    text = arr[i];
+                    len = text.length;
+                }
+            }
+        }, 50);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <section className="relative top-0 h-[95vh]">
+            <div className='absolute top-0 w-full h-full'>
+                <img src={BGImage.src} alt="background image" className='w-full h-full bg-cover bg-no-repeat bg-opacity-95' />
+            </div>
+            <div className='absolute top-0 z-10 w-full h-full flex flex-col justify-center items-center text-white'>
+                <h1 className=" text-4xl sm:text-7xl font-bold">Hello, I&#39;m <span className='transition duration-1000 ease-in-out animate-pulse'>Manoj</span></h1>
+                <h4 className='mt-3 text-2xl sm:text-4xl text-blue-800 font-medium'>{runningText}<span className='text-gray-500'>|</span></h4>
+                <div className="flex space-x-12 mt-12">
+                    <a href="https://github.com/Manoj554" target="_blank" rel="noreferrer">
+                        <BsGithub className='intro-icon' />
+                    </a>
+                    <a href="https://www.linkedin.com/in/manoj-kumar-mondal-3a189b19a" target="_blank" rel="noreferrer">
+                        <BsLinkedin className='intro-icon' />
+                    </a>
+                    <a href="mailto:thisismanojmondal@gmail.com" target="_blank" rel="noreferrer">
+                        <IoMdMail className='intro-icon' />
+                    </a>
+                </div>
+                <a href="/favicon.ico">
+                    <button className='mt-8 py-1 px-5 rounded-lg text-lg font-medium bg-blue-600 transition duration-100 ease-in-out hover:scale-110 border-gray-400 hover:border-b-2 hover:border-l-2 hover:bg-blue-700'>Resume</button>
+                </a>
+
+            </div>
+        </section>
+    )
+}
+
+export default IntroSection
