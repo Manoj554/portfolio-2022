@@ -6,7 +6,7 @@ const AppContext = createContext({
 });
 
 const Layout = ({ children }) => {
-    const [toggleDarkMode, setToggleDarkMode] = useState(false);
+    const [toggleDarkMode, setToggleDarkMode] = useState(true);
 
     const ToggleTheme = () => {
         setToggleDarkMode(prev => !prev);

@@ -19,7 +19,7 @@ export default function Home() {
     return (
         <main>
             <Head>
-                <title>Manoj Kumar Mondal | Portfolio</title>
+                <title>Manoj Kumar Mondal</title>
             </Head>
             <section className={`${toggleDarkMode ? 'theme-dark' : 'theme-light'} absolute top-0 left-0 pb-20`}>
                 <Navbar />

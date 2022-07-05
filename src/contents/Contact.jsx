@@ -20,7 +20,7 @@ const Contact = () => {
                         />
                     </div>
                     <h3 className='mt-6 font-bold text-2xl xs:text-3xl'>Manoj Kumar Mondal</h3>
-                    <p className='font-normal text-base mt-3'>I am available for full time position or freelance.</p>
+                    <p className='font-normal text-base mt-3'>I&#39;m currently looking for any new opportunities and to explore.</p>
 
                     <div className='mt-10 lg:mt-0 lg:absolute lg:bottom-8'>
                         <h1 className='text-2xl font-bold mb-3'>Reach out to me !!!</h1>

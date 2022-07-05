@@ -1,5 +1,3 @@
-
-
 const SkillBox = ({ Component, name }) => {
     return (
         <div className=' flex py-4 flex-col  items-center justify-start w-full '>

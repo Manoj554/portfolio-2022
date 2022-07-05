@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FaCode } from 'react-icons/fa';
 import { IoIosSunny, IoIosMoon } from 'react-icons/io';
 import { HiOutlineMenu } from 'react-icons/hi';

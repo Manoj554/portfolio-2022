@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
 import { IoMdMail } from 'react-icons/io';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import BGImage from '../assets/images/bg.jpg';
@@ -8,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 const IntroSection = () => {
     const [runningText, setRunningText] = useState('');
-    const arr = ['Welcome to my portfolio', 'I am a full stack developer', 'Tech Stack | MERN'];
+    const arr = ['Welcome to my portfolio', 'I am a full stack web developer', 'Tech Stack | MERN'];
 
     const pause = () => new Promise((resolve, err) => {
         let st = setTimeout(() => {
@@ -54,9 +53,9 @@ const IntroSection = () => {
                 <img src={BGImage.src} alt="background image" className='w-full h-full bg-cover bg-no-repeat bg-opacity-95' />
             </div>
             <div className='absolute top-0 z-10 w-full h-full flex flex-col justify-center items-center text-white'>
-                <h1 className=" text-4xl sm:text-7xl font-bold">Hello, I&#39;m <span className='transition duration-1000 ease-in-out animate-pulse'>Manoj</span></h1>
-                <h4 className='mt-3 text-2xl sm:text-4xl text-blue-800 font-medium'>{runningText}<span className='text-gray-500'>|</span></h4>
-                <div className="flex space-x-12 mt-12">
+                <h1 className=" text-4xl sm:text-7xl font-bold text-black">Hello, I&#39;m <span className='transition duration-1000 ease-in-out animate-pulse'>Manoj</span></h1>
+                <h4 className='mt-3 text-2xl sm:text-4xl text-blue-700 font-medium'>{runningText}<span className='text-cyan-700'>|</span></h4>
+                <div className="flex space-x-12 mt-16">
                     <a href="https://github.com/Manoj554" target="_blank" rel="noreferrer">
                         <BsGithub className='intro-icon' />
                     </a>
@@ -67,7 +66,7 @@ const IntroSection = () => {
                         <IoMdMail className='intro-icon' />
                     </a>
                 </div>
-                <a href="/favicon.ico">
+                <a href="/manojkumarmondal-resume.pdf" target="_blank" rel="noreferrer">
                     <button className='mt-8 py-1 px-5 rounded-lg text-lg font-medium bg-blue-600 transition duration-100 ease-in-out hover:scale-110 border-gray-400 hover:border-b-2 hover:border-l-2 hover:bg-blue-700'>Resume</button>
                 </a>
 

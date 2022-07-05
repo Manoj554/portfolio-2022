@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAppContext } from '../layout/Layout'
 
 const TextInput = ({ texarea, label, type, name, placeholder, value, onChange, required }) => {
