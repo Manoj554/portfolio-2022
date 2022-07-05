@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useAppContext } from "../layout/Layout";
 import TextInput from "./TextInput";
 
-
 const ContactForm = () => {
     const defaultFormValue = { name: '', email: '', subject: '', phone: '', message: '' };
     const { toggleDarkMode } = useAppContext();
@@ -12,6 +11,7 @@ const ContactForm = () => {
     const handleFormOnChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
     const validateForm = (form) => {
         const { name, email, phone, subject, message } = form;
         if (!name) return 'name is required*';
@@ -23,11 +23,18 @@ const ContactForm = () => {
     };
 
     const handleSubmit = (e) => {
+        setError('');
         e.preventDefault();
         let validate = validateForm(formData);
         if (validate === 'pass') {
-            console.log('form subbitmed');
-            setFormData(defaultFormValue)
+            fetch('/api/mail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            }).then(res => res.json()).then(() => alert('Message sent')).catch(err => console.log(err));
+            setFormData(defaultFormValue);
         } else {
             setError(validate);
         }

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 const IntroSection = () => {
     const [runningText, setRunningText] = useState('');
-    const arr = ['Welcome to my portfolio', 'I am a full stack web developer', 'Tech Stack | MERN'];
+    const arr = ['Welcome to My Portfolio Website', 'I am a Full Stack Web Developer', 'Tech Stack | MERN'];
 
     const pause = () => new Promise((resolve, err) => {
         let st = setTimeout(() => {
