@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 const IntroSection = () => {
     const [runningText, setRunningText] = useState('');
-    const arr = ['Welcome to My Portfolio Website', 'I am a Full Stack Web Developer', 'Tech Stack | MERN'];
+    const arr = ['Welcome to My Portfolio', 'I am a Full Stack Developer', 'Tech: [ MERN Stack, System Programming,]'];
 
     const pause = () => new Promise((resolve, err) => {
         let st = setTimeout(() => {
@@ -59,7 +59,7 @@ const IntroSection = () => {
                     <a href="https://github.com/Manoj554" target="_blank" rel="noreferrer">
                         <BsGithub className='intro-icon' />
                     </a>
-                    <a href="https://www.linkedin.com/in/manoj-kumar-mondal-3a189b19a" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/manoj554" target="_blank" rel="noreferrer">
                         <BsLinkedin className='intro-icon' />
                     </a>
                     <a href="mailto:thisismanojmondal@gmail.com" target="_blank" rel="noreferrer">

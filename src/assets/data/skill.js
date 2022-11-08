@@ -1,5 +1,6 @@
-import { FaJava, FaCss3, FaHtml5, FaReact } from 'react-icons/fa';
+import { FaJava, FaCss3, FaHtml5, FaReact, FaCode } from 'react-icons/fa';
 import { SiJavascript, SiFirebase, SiMongodb, SiMaterialui, SiTailwindcss, SiNodedotjs, SiTypescript, SiNextdotjs, SiRedux } from 'react-icons/si';
+import { MdSystemUpdateAlt } from 'react-icons/md';
 
 export const skillsApi = [
     {
@@ -66,5 +67,15 @@ export const skillsApi = [
         id: 13,
         name: "Java",
         icon: <FaJava />
+    },
+    {
+        id: 14,
+        name: "C",
+        icon: <FaCode />
+    },
+    {
+        id: 15,
+        name: "System Programming",
+        icon: <MdSystemUpdateAlt />
     },
 ]

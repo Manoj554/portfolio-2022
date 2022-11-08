@@ -14,7 +14,7 @@ const Projects = () => {
                 </div>
                 <div>
                     <a href="https://manojkumarmondal.vercel.app" target="_blank" rel="noreferrer" >
-                        <button className='git-button'>My all Projects</button>
+                        <button className='git-button'>Explore Other Projects</button>
                     </a>
                 </div>
             </div>
